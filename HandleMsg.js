@@ -135,15 +135,15 @@ module.exports = HandleMsg = async (aruga, message) => {
         // Menu and TnC
         case 'speed':
         case 'ping':
-            await aruga.sendText(from, `Pong!!!!\nSpeed: ${processTime(t, moment())} _Second_`)
+            await Itspras.sendText(from, `Pong!!!!\nSpeed: ${processTime(t, moment())} _Second_`)
             break
         case 'tnc':
-            await aruga.sendText(from, menuId.textTnC())
+            await Itspras.sendText(from, menuId.textTnC())
             break
         case 'notes':
         case 'menu':
         case 'help':
-            await aruga.sendText(from, menuId.textMenu(pushname))
+            await Itspras.sendText(from, menuId.textMenu(pushname))
             .then(() => ((isGroupMsg) && (isGroupAdmins)) ? aruga.sendText(from, `Menu Admin Grup: *${prefix}menuadmin*`) : null)
             break
         case 'menuadmin':
@@ -338,7 +338,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                         hehex += '╠➥ '
                         hehex += response.data.data[i].name.transliteration.id.toLowerCase() + '\n'
                             }
-                        hehex += '╚═〘 *A R U G A  B O T* 〙'
+                        hehex += '╚═〘 *Itspras  B O T* 〙'
                     aruga.reply(from, hehex, id)
                 })
             } catch(err) {
@@ -952,7 +952,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                 hehex += '╠➥'
                 hehex += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
             }
-            hehex += '╚═〘 *R I D H O  B O T* 〙'
+            hehex += '╚═〘 *Itspras  B O T* 〙'
             await aruga.sendTextWithMentions(from, hehex)
             break
 		case 'simisimi':
