@@ -135,15 +135,15 @@ module.exports = HandleMsg = async (aruga, message) => {
         // Menu and TnC
         case 'speed':
         case 'ping':
-            await Itspras.sendText(from, `Pong!!!!\nSpeed: ${processTime(t, moment())} _Second_`)
+            await aruga.sendText(from, `Pong!!!!\nSpeed: ${processTime(t, moment())} _Second_`)
             break
         case 'tnc':
-            await Itspras.sendText(from, menuId.textTnC())
+            await aruga.sendText(from, menuId.textTnC())
             break
         case 'notes':
         case 'menu':
         case 'help':
-            await Itspras.sendText(from, menuId.textMenu(pushname))
+            await aruga.sendText(from, menuId.textMenu(pushname))
             .then(() => ((isGroupMsg) && (isGroupAdmins)) ? aruga.sendText(from, `Menu Admin Grup: *${prefix}menuadmin*`) : null)
             break
         case 'menuadmin':
